@@ -7,6 +7,27 @@
         mc:Ignorable="d"
         Title="AdminModeEditor" Height="450" Width="800">
     <Grid>
-        
+        <Grid.Background>
+            <ImageBrush ImageSource="addWordBackground.jpg"/>
+        </Grid.Background>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Background="#FFAABBCC">
+            <StackPanel>
+                <TextBlock Text="Word:" Margin="5" HorizontalAlignment="Left"/>
+                <TextBox Name ="word" Width="200" Height="30" Margin="5" HorizontalAlignment="Left"/>
+            </StackPanel>
+            <StackPanel>
+                <TextBlock Text="Description:" Margin="5" HorizontalAlignment="Left"/>
+                <TextBox Name ="description" Width="200" Height="30" Margin="5" HorizontalAlignment="Left"/>
+            </StackPanel>
+            <StackPanel>
+                <TextBlock Text="Image:" Margin="5" HorizontalAlignment="Left"/>
+                <TextBox Name ="image" Width="200" Height="30" Margin="5" HorizontalAlignment="Left"/>
+            </StackPanel>
+            <StackPanel>
+                <TextBlock Text="Category:" Margin="5" HorizontalAlignment="Left"/>
+                <TextBox Name ="category" Width="200" Height="30" Margin="5" HorizontalAlignment="Left"/>
+            </StackPanel>
+            <Button Content="Add Word" Width="75" Height="30" Margin="0 5" FontSize="15" Click="addWordBtn"/>
+        </StackPanel>
     </Grid>
 </Window>
