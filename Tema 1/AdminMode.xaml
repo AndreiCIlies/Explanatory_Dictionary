@@ -18,8 +18,8 @@
             <TextBox Width="200" Height="30" Margin="0,0,0,10">
                 Password:
             </TextBox>
-            <TextBox Name="password" Width="200" Height="30" Margin="0,5,0,10"/>
-            <Button Content="Login" Width="75" Height="30" Margin="0 5" FontSize="15"/>
+            <PasswordBox Name="password" Width="200" Height="30" Margin="0,5,0,10"/>
+            <Button Content="Login" Width="75" Height="30" Margin="0 5" FontSize="15" Click="loginModeBtn"/>
         </StackPanel>
     </Grid>
 </Window>
