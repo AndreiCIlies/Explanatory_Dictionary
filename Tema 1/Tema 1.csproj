@@ -130,13 +130,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="background.jpg" />
+    <Resource Include="Images\background.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="loginBackground.jpg" />
+    <Resource Include="Images\loginBackground.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="addWordBackground.jpg" />
+    <Resource Include="Images\addWordBackground.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
