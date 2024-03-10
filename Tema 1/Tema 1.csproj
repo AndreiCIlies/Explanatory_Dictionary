@@ -92,6 +92,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Classes\Admin.cs" />
+    <Compile Include="Classes\Word.cs" />
     <Compile Include="DeleteWordWindow.xaml.cs">
       <DependentUpon>DeleteWordWindow.xaml</DependentUpon>
     </Compile>
