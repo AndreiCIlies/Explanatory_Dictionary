@@ -32,12 +32,14 @@ namespace Tema_1
 
         private void editWordBtn(object sender, RoutedEventArgs e)
         {
-
+            EditWordWindow editWordWindow = new EditWordWindow();
+            editWordWindow.Show();
         }
 
         private void deleteWordBtn(object sender, RoutedEventArgs e)
         {
-
+            DeleteWordWindow deleteWordWindow = new DeleteWordWindow();
+            deleteWordWindow.Show();
         }
     }
 }

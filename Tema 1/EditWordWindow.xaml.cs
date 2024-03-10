@@ -23,5 +23,10 @@ namespace Tema_1
         {
             InitializeComponent();
         }
+
+        private void editWordInDictionaryBtn(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }
