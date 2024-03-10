@@ -7,7 +7,7 @@ using System.Windows.Controls;
 
 namespace Tema_1.Classes
 {
-    internal class Word
+    public class Word
     {
         public String word { get; set; }
         public String description { get; set; }
