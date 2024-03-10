@@ -26,7 +26,19 @@ namespace Tema_1
 
         private void addWordInDictionaryBtn(object sender, RoutedEventArgs e)
         {
-            
+            string newWord = word.Text;
+            string newDescription = description.Text;
+            string newImage = image.Text;
+            string newCategory = category.Text;
+
+            if (string.IsNullOrEmpty(newImage))
+            {
+                newImage = "unavailableImage.jpg";
+            }
+
+            Classes.Word newWordToAdd = new Classes.Word(newWord, newDescription, newImage, newCategory);
+            Classes.Admin admin = new Classes.Admin();
+            admin.AddWordInDictionary(newWordToAdd);
         }
     }
 }

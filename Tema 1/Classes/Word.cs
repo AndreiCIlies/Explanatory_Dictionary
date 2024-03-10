@@ -9,12 +9,12 @@ namespace Tema_1.Classes
 {
     public class Word
     {
-        public String word { get; set; }
-        public String description { get; set; }
-        public Image image { get; set; }
-        public String category { get; set; }
+        public string word { get; set; }
+        public string description { get; set; }
+        public string image { get; set; }
+        public string category { get; set; }
 
-        public Word(String word, String description, Image image, String category)
+        public Word(string word, string description, string image, string category)
         {
             this.word = word;
             this.description = description;
@@ -22,7 +22,7 @@ namespace Tema_1.Classes
             this.category = category;
         }
 
-        public Word(String word, String description, String category)
+        public Word(string word, string description, string category)
         {
             this.word = word;
             this.description = description;

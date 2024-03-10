@@ -8,7 +8,7 @@
         Title="AdminModeEditor" Height="450" Width="800">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="loginBackground.jpg"/>
+            <ImageBrush ImageSource="/Images/loginBackground.jpg"/>
         </Grid.Background>
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
             <Button Content="Add Word" Width="150" Height="50" Margin="0 5" FontSize="20" Click="addWordBtn"/>

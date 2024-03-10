@@ -8,7 +8,7 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="background.jpg"/>
+            <ImageBrush ImageSource="/Images/background.jpg"/>
         </Grid.Background>
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
             <Button Content="Admin Mode" Width="150" Height="35" Margin="0 5" FontSize="15" Click="adminModeBtn"/>

@@ -8,7 +8,7 @@
         Title="DeleteWordWindow" Height="450" Width="800">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="addWordBackground.jpg"/>
+            <ImageBrush ImageSource="/Images/addWordBackground.jpg"/>
         </Grid.Background>
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Background="#FFAABBCC">
             <StackPanel>
