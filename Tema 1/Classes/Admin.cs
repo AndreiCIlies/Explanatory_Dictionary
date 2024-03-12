@@ -55,7 +55,36 @@ namespace Tema_1.Classes
 
         public void EditWordInDictionary(Word word)
         {
+            try
+            {
+                string filePath = "C://Users//usER//Desktop//Anul_II//Semestrul_II//MAP//Teme//Tema 1//Tema 1//Tema 1//words.txt";
 
+                if (!File.ReadAllText(filePath).Contains(word.word))
+                {
+                    MessageBox.Show($"The word '{word.word}' does not exist in the dictionary.", "Non-existent Word", MessageBoxButton.OK, MessageBoxImage.Information);
+                    return;
+                }
+
+                string[] lines = File.ReadAllLines(filePath);
+                for (int i = 0; i < lines.Length; i += 4)
+                {
+                    if (lines[i] == word.word)
+                    {
+                        lines[i] = word.word;
+                        lines[i + 1] = word.description;
+                        lines[i + 2] = word.image;
+                        lines[i + 3] = word.category;
+                        break;
+                    }
+                }
+
+                File.WriteAllLines(filePath, lines);
+                Console.WriteLine($"Word '{word.word}' edited in the dictionary.");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("An error occurred while editing the word: " + e.Message);
+            }
         }
 
         public void DeleteWordFromDictionary(Word word)
