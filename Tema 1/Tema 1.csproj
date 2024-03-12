@@ -138,7 +138,7 @@
     <Resource Include="Images\loginBackground.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\addWordBackground.jpg" />
+    <Resource Include="Images\adminModeBackground.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\orange.jpg" />

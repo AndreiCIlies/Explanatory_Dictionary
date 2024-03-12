@@ -8,7 +8,7 @@
         Title="AddWordWindow" Height="450" Width="800">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/Images/Background.jpg"/>
+            <ImageBrush ImageSource="/Images/adminModeBackground.jpg"/>
         </Grid.Background>
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Background="#FFAABBCC">
             <StackPanel>

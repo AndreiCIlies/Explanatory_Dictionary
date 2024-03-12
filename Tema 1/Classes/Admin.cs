@@ -60,7 +60,37 @@ namespace Tema_1.Classes
 
         public void DeleteWordFromDictionary(Word word)
         {
+            try
+            {
+                string filePath = "C://Users//usER//Desktop//Anul_II//Semestrul_II//MAP//Teme//Tema 1//Tema 1//Tema 1//words.txt";
 
+                if (!File.ReadAllText(filePath).Contains(word.word))
+                {
+                    MessageBox.Show($"The word '{word.word}' does not exist in the dictionary.", "Non-existent Word", MessageBoxButton.OK, MessageBoxImage.Information);
+                    return;
+                }
+
+                string[] lines = File.ReadAllLines(filePath);
+                List<string> newLines = new List<string>();
+                for (int i = 0; i < lines.Length; i++)
+                {
+                    if (lines[i] == word.word)
+                    {
+                        i += 3;
+                    }
+                    else
+                    {
+                        newLines.Add(lines[i]);
+                    }
+                }
+
+                File.WriteAllLines(filePath, newLines);
+                Console.WriteLine($"Word '{word.word}' deleted from the dictionary.");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("An error occurred while deleting the word: " + e.Message);
+            }
         }
     }
 }
