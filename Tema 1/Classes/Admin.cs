@@ -31,7 +31,7 @@ namespace Tema_1.Classes
             {
                 string filePath = "C://Users//usER//Desktop//Anul_II//Semestrul_II//MAP//Teme//Tema 1//Tema 1//Tema 1//words.txt";
 
-                if(File.ReadAllText(filePath).Contains(word.word))
+                if (File.ReadAllText(filePath).Contains(word.word))
                 {
                     MessageBox.Show($"The word '{word.word}' already exists in the dictionary.", "Duplicate Word", MessageBoxButton.OK, MessageBoxImage.Information);
                     return;

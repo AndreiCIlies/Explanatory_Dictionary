@@ -31,6 +31,48 @@ namespace Tema_1
             string newImage = image.Text;
             string newCategory = category.Text;
 
+            if (string.IsNullOrEmpty(newWord) && string.IsNullOrEmpty(newDescription) && string.IsNullOrEmpty(newCategory))
+            {
+                MessageBox.Show($"No informations added for the new word", "No Informations", MessageBoxButton.OK, MessageBoxImage.Information);
+                return;
+            }
+
+            if (string.IsNullOrEmpty(newWord) && string.IsNullOrEmpty(newDescription))
+            {
+                MessageBox.Show($"Empty Word and Description TextBoxes", "No Word and Description", MessageBoxButton.OK, MessageBoxImage.Information);
+                return;
+            }
+
+            if (string.IsNullOrEmpty(newWord) && string.IsNullOrEmpty(newCategory))
+            {
+                MessageBox.Show($"Empty Word and Category TextBoxes", "No Word and Category", MessageBoxButton.OK, MessageBoxImage.Information);
+                return;
+            }
+
+            if (string.IsNullOrEmpty(newDescription) && string.IsNullOrEmpty(newCategory))
+            {
+                MessageBox.Show($"Empty Description and Category TextBoxes", "No Description and Category", MessageBoxButton.OK, MessageBoxImage.Information);
+                return;
+            }
+
+            if (string.IsNullOrEmpty(newWord))
+            {
+                MessageBox.Show($"Empty Word TextBox", "No Word", MessageBoxButton.OK, MessageBoxImage.Information);
+                return;
+            }
+
+            if(string.IsNullOrEmpty(newDescription))
+            {
+                MessageBox.Show($"Empty Description TextBox", "No Description", MessageBoxButton.OK, MessageBoxImage.Information);
+                return;
+            }
+
+            if(string.IsNullOrEmpty(newCategory))
+            {
+                MessageBox.Show($"Empty Category TextBox", "No Category", MessageBoxButton.OK, MessageBoxImage.Information);
+                return;
+            }
+
             if (string.IsNullOrEmpty(newImage))
             {
                 newImage = "unavailableImage.jpg";
