@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,24 @@ namespace Tema_1
         public AddWordWindow()
         {
             InitializeComponent();
+            LoadWordCategories();
+        }
+
+        private void LoadWordCategories()
+        {
+            string filePath = "C://Users//usER//Desktop//Anul_II//Semestrul_II//MAP//Teme//Tema 1//Tema 1//Tema 1//words.txt";
+            string[] lines = File.ReadAllLines(filePath);
+            HashSet<string> categories = new HashSet<string>();
+
+            for (int i = 3; i < lines.Length; i += 4)
+            {
+                categories.Add(lines[i]);
+            }
+
+            foreach (var wordCategory in categories)
+            {
+                category.Items.Add(wordCategory);
+            }
         }
 
         private void addWordInDictionaryBtn(object sender, RoutedEventArgs e)
