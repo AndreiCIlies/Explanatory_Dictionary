@@ -93,13 +93,24 @@ namespace Tema_1.Classes
             {
                 string filePath = "C://Users//usER//Desktop//Anul_II//Semestrul_II//MAP//Teme//Tema 1//Tema 1//Tema 1//words.txt";
 
-                if (!File.ReadAllText(filePath).Contains(word.word))
+                string[] lines = File.ReadAllLines(filePath);
+                bool foundWord = false;
+
+                for(int i = 0; i < lines.Length; i += 4)
+                {
+                    if (lines[i] == word.word)
+                    {
+                        foundWord = true;
+                        break;
+                    }
+                }
+
+                if(foundWord == false)
                 {
                     MessageBox.Show($"The word '{word.word}' does not exist in the dictionary.", "Non-existent Word", MessageBoxButton.OK, MessageBoxImage.Information);
                     return;
                 }
 
-                string[] lines = File.ReadAllLines(filePath);
                 List<string> newLines = new List<string>();
                 for (int i = 0; i < lines.Length; i++)
                 {

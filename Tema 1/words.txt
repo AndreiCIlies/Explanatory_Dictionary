@@ -1,7 +1,3 @@
-orange
-an orange fruit
-orange.jpg
-fruit
 chocolate
 dessert
 chocolate.jpg

@@ -29,22 +29,14 @@ namespace Tema_1
         private void deleteWordInDictionaryBtn(object sender, RoutedEventArgs e)
         {
             string inputWord = word.Text;
-            Classes.Word wordToDelete = new Classes.Word(inputWord, "", "", "");
 
-            string filePath = "C://Users//usER//Desktop//Anul_II//Semestrul_II//MAP//Teme//Tema 1//Tema 1//Tema 1//words.txt";
-            string[] lines = File.ReadAllLines(filePath);
-            List<string> newLines = new List<string>();
-            for (int i = 0; i < lines.Length; i++)
+            if(string.IsNullOrEmpty(inputWord))
             {
-                if (lines[i] == inputWord)
-                {
-                    wordToDelete.description = lines[i + 1];
-                    wordToDelete.image = lines[i + 2];
-                    wordToDelete.category = lines[i + 3];
-                    break;
-                }
+                MessageBox.Show($"Empty Word TextBox", "No Word", MessageBoxButton.OK, MessageBoxImage.Information);
+                return;
             }
 
+            Classes.Word wordToDelete = new Classes.Word(inputWord, "", "", "");
             Classes.Admin admin = new Classes.Admin();
             admin.DeleteWordFromDictionary(wordToDelete);
         }
