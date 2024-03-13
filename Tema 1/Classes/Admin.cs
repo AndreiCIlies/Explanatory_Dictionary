@@ -29,25 +29,13 @@ namespace Tema_1.Classes
         {
             try
             {
-                string filePath = "C://Users//usER//Desktop//Anul_II//Semestrul_II//MAP//Teme//Tema 1//Tema 1//Tema 1//words.txt";
-
-                string[] lines = File.ReadAllLines(filePath);
-                bool foundWord = false;
-
-                for (int i = 0; i < lines.Length; i += 4)
+                if (word.image.EndsWith(".jpg") == false)
                 {
-                    if (lines[i] == word.word)
-                    {
-                        foundWord = true;
-                        break;
-                    }
-                }
-
-                if (foundWord == false)
-                {
-                    MessageBox.Show($"The word '{word.word}' does not exist in the dictionary.", "Non-existent Word", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show($"The image of the word '{word.word}' is not a .jpg file.", "Not .jpg Image", MessageBoxButton.OK, MessageBoxImage.Information);
                     return;
                 }
+
+                string filePath = "C://Users//usER//Desktop//Anul_II//Semestrul_II//MAP//Teme//Tema 1//Tema 1//Tema 1//words.txt";
 
                 using (StreamWriter writer = File.AppendText(filePath))
                 {
@@ -106,6 +94,11 @@ namespace Tema_1.Classes
                         if(word.category == lines[i + 3])
                         {
                             MessageBox.Show($"The category of the word '{word.word}' is the same as the old one.", "Same Category", MessageBoxButton.OK, MessageBoxImage.Information);
+                            return;
+                        }
+                        if (word.image.EndsWith(".jpg") == false)
+                        {
+                            MessageBox.Show($"The image of the word '{word.word}' is not a .jpg file.", "Not .jpg Image", MessageBoxButton.OK, MessageBoxImage.Information);
                             return;
                         }
                         lines[i] = word.word;
