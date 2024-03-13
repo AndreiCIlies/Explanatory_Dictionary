@@ -31,9 +31,21 @@ namespace Tema_1.Classes
             {
                 string filePath = "C://Users//usER//Desktop//Anul_II//Semestrul_II//MAP//Teme//Tema 1//Tema 1//Tema 1//words.txt";
 
-                if (File.ReadAllText(filePath).Contains(word.word))
+                string[] lines = File.ReadAllLines(filePath);
+                bool foundWord = false;
+
+                for (int i = 0; i < lines.Length; i += 4)
                 {
-                    MessageBox.Show($"The word '{word.word}' already exists in the dictionary.", "Duplicate Word", MessageBoxButton.OK, MessageBoxImage.Information);
+                    if (lines[i] == word.word)
+                    {
+                        foundWord = true;
+                        break;
+                    }
+                }
+
+                if (foundWord == false)
+                {
+                    MessageBox.Show($"The word '{word.word}' does not exist in the dictionary.", "Non-existent Word", MessageBoxButton.OK, MessageBoxImage.Information);
                     return;
                 }
 
@@ -59,17 +71,43 @@ namespace Tema_1.Classes
             {
                 string filePath = "C://Users//usER//Desktop//Anul_II//Semestrul_II//MAP//Teme//Tema 1//Tema 1//Tema 1//words.txt";
 
-                if (!File.ReadAllText(filePath).Contains(word.word))
+                string[] lines = File.ReadAllLines(filePath);
+                bool foundWord = false;
+
+                for (int i = 0; i < lines.Length; i += 4)
+                {
+                    if (lines[i] == word.word)
+                    {
+                        foundWord = true;
+                        break;
+                    }
+                }
+
+                if (foundWord == false)
                 {
                     MessageBox.Show($"The word '{word.word}' does not exist in the dictionary.", "Non-existent Word", MessageBoxButton.OK, MessageBoxImage.Information);
                     return;
                 }
 
-                string[] lines = File.ReadAllLines(filePath);
                 for (int i = 0; i < lines.Length; i += 4)
                 {
                     if (lines[i] == word.word)
                     {
+                        if(word.description == lines[i + 1])
+                        {
+                            MessageBox.Show($"The description of the word '{word.word}' is the same as the old one.", "Same Description", MessageBoxButton.OK, MessageBoxImage.Information);
+                            return;
+                        }
+                        if(word.image == lines[i + 2])
+                        {
+                            MessageBox.Show($"The image of the word '{word.word}' is the same as the old one.", "Same Image", MessageBoxButton.OK, MessageBoxImage.Information);
+                            return;
+                        }
+                        if(word.category == lines[i + 3])
+                        {
+                            MessageBox.Show($"The category of the word '{word.word}' is the same as the old one.", "Same Category", MessageBoxButton.OK, MessageBoxImage.Information);
+                            return;
+                        }
                         lines[i] = word.word;
                         lines[i + 1] = word.description;
                         lines[i + 2] = word.image;

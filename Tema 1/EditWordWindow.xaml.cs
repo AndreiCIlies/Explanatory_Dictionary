@@ -28,22 +28,53 @@ namespace Tema_1
         private void editWordInDictionaryBtn(object sender, RoutedEventArgs e)
         {
             string inputWord = word.Text;
-            Classes.Word wordToEdit = new Classes.Word(inputWord, "", "", "");
+            string inputDescription = description.Text;
+            string inputImage = image.Text;
+            string inputCategory = category.Text;
 
-            string filePath = "C://Users//usER//Desktop//Anul_II//Semestrul_II//MAP//Teme//Tema 1//Tema 1//Tema 1//words.txt";
-            string[] lines = File.ReadAllLines(filePath);
-            List<string> newLines = new List<string>();
-            for (int i = 0; i < lines.Length; i++)
+            if (string.IsNullOrEmpty(inputWord) && string.IsNullOrEmpty(inputDescription) && string.IsNullOrEmpty(inputCategory))
             {
-                if (lines[i] == inputWord)
-                {
-                    wordToEdit.description = string.IsNullOrEmpty(description.Text) ? lines[i + 1] : description.Text;
-                    wordToEdit.image = string.IsNullOrEmpty(image.Text) ? lines[i + 2] : image.Text;
-                    wordToEdit.category = string.IsNullOrEmpty(category.Text) ? lines[i + 3] : category.Text;
-                    break;
-                }
+                MessageBox.Show($"No informations added for the word", "No Informations", MessageBoxButton.OK, MessageBoxImage.Information);
+                return;
             }
 
+            if (string.IsNullOrEmpty(inputWord) && string.IsNullOrEmpty(inputDescription))
+            {
+                MessageBox.Show($"Empty Word and Description TextBoxes", "No Word and Description", MessageBoxButton.OK, MessageBoxImage.Information);
+                return;
+            }
+
+            if (string.IsNullOrEmpty(inputWord) && string.IsNullOrEmpty(inputCategory))
+            {
+                MessageBox.Show($"Empty Word and Category TextBoxes", "No Word and Category", MessageBoxButton.OK, MessageBoxImage.Information);
+                return;
+            }
+
+            if (string.IsNullOrEmpty(inputDescription) && string.IsNullOrEmpty(inputCategory))
+            {
+                MessageBox.Show($"Empty Description and Category TextBoxes", "No Description and Category", MessageBoxButton.OK, MessageBoxImage.Information);
+                return;
+            }
+
+            if (string.IsNullOrEmpty(inputWord))
+            {
+                MessageBox.Show($"Empty Word TextBox", "No Word", MessageBoxButton.OK, MessageBoxImage.Information);
+                return;
+            }
+
+            if (string.IsNullOrEmpty(inputDescription))
+            {
+                MessageBox.Show($"Empty Description TextBox", "No Description", MessageBoxButton.OK, MessageBoxImage.Information);
+                return;
+            }
+
+            if (string.IsNullOrEmpty(inputCategory))
+            {
+                MessageBox.Show($"Empty Category TextBox", "No Category", MessageBoxButton.OK, MessageBoxImage.Information);
+                return;
+            }
+
+            Classes.Word wordToEdit = new Classes.Word(inputWord, inputDescription, inputImage, inputCategory);
             Classes.Admin admin = new Classes.Admin();
             admin.EditWordInDictionary(wordToEdit);
         }
