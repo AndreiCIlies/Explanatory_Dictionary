@@ -29,13 +29,25 @@ namespace Tema_1.Classes
         {
             try
             {
-                if (word.image.EndsWith(".jpg") == false)
+                string filePath = "C://Users//usER//Desktop//Anul_II//Semestrul_II//MAP//Teme//Tema 1//Tema 1//Tema 1//words.txt";
+
+                string[] lines = File.ReadAllLines(filePath);
+                bool foundWord = false;
+
+                for (int i = 0; i < lines.Length; i += 4)
                 {
-                    MessageBox.Show($"The image of the word '{word.word}' is not a .jpg file.", "Not .jpg Image", MessageBoxButton.OK, MessageBoxImage.Information);
-                    return;
+                    if (lines[i] == word.word)
+                    {
+                        foundWord = true;
+                        break;
+                    }
                 }
 
-                string filePath = "C://Users//usER//Desktop//Anul_II//Semestrul_II//MAP//Teme//Tema 1//Tema 1//Tema 1//words.txt";
+                if (foundWord == true)
+                {
+                    MessageBox.Show($"The word '{word.word}' does already exist in the dictionary.", "Existent Word", MessageBoxButton.OK, MessageBoxImage.Information);
+                    return;
+                }
 
                 using (StreamWriter writer = File.AppendText(filePath))
                 {
@@ -81,25 +93,17 @@ namespace Tema_1.Classes
                 {
                     if (lines[i] == word.word)
                     {
-                        if(word.description == lines[i + 1])
+                        if (string.IsNullOrEmpty(word.description))
                         {
-                            MessageBox.Show($"The description of the word '{word.word}' is the same as the old one.", "Same Description", MessageBoxButton.OK, MessageBoxImage.Information);
-                            return;
+                            word.description = lines[i + 1];
                         }
-                        if(word.image == lines[i + 2])
+                        if (string.IsNullOrEmpty(word.image))
                         {
-                            MessageBox.Show($"The image of the word '{word.word}' is the same as the old one.", "Same Image", MessageBoxButton.OK, MessageBoxImage.Information);
-                            return;
+                            word.image = lines[i + 2];
                         }
-                        if(word.category == lines[i + 3])
+                        if (string.IsNullOrEmpty(word.category))
                         {
-                            MessageBox.Show($"The category of the word '{word.word}' is the same as the old one.", "Same Category", MessageBoxButton.OK, MessageBoxImage.Information);
-                            return;
-                        }
-                        if (word.image.EndsWith(".jpg") == false)
-                        {
-                            MessageBox.Show($"The image of the word '{word.word}' is not a .jpg file.", "Not .jpg Image", MessageBoxButton.OK, MessageBoxImage.Information);
-                            return;
+                            word.category = lines[i + 3];
                         }
                         lines[i] = word.word;
                         lines[i + 1] = word.description;
@@ -127,7 +131,7 @@ namespace Tema_1.Classes
                 string[] lines = File.ReadAllLines(filePath);
                 bool foundWord = false;
 
-                for(int i = 0; i < lines.Length; i += 4)
+                for (int i = 0; i < lines.Length; i += 4)
                 {
                     if (lines[i] == word.word)
                     {

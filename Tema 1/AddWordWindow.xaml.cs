@@ -97,9 +97,34 @@ namespace Tema_1
                 newImage = "unavailableImage.jpg";
             }
 
+            if (newImage.EndsWith(".jpg") == false)
+            {
+                MessageBox.Show($"The image of the word '{newWord}' is not a .jpg file.", "Not .jpg Image", MessageBoxButton.OK, MessageBoxImage.Information);
+                return;
+            }
+
             Classes.Word newWordToAdd = new Classes.Word(newWord, newDescription, newImage, newCategory);
             Classes.Admin admin = new Classes.Admin();
             admin.AddWordInDictionary(newWordToAdd);
+        }
+
+        private void addNewCategoryBtn(object sender, RoutedEventArgs e)
+        {
+            string newCategoryForWord = newCategory.Text;
+
+            if (string.IsNullOrEmpty(newCategoryForWord))
+            {
+                MessageBox.Show($"Empty New Category TextBox", "No New Category", MessageBoxButton.OK, MessageBoxImage.Information);
+                return;
+            }
+
+            if (category.Items.Contains(newCategoryForWord))
+            {
+                MessageBox.Show($"The category '{newCategoryForWord}' already exists", "Existing Category", MessageBoxButton.OK, MessageBoxImage.Information);
+                return;
+            }
+
+            category.Items.Add(newCategoryForWord);
         }
     }
 }

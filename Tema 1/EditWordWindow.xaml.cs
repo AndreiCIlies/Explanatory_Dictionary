@@ -32,45 +32,15 @@ namespace Tema_1
             string inputImage = image.Text;
             string inputCategory = category.Text;
 
-            if (string.IsNullOrEmpty(inputWord) && string.IsNullOrEmpty(inputDescription) && string.IsNullOrEmpty(inputCategory))
-            {
-                MessageBox.Show($"No informations added for the word", "No Informations", MessageBoxButton.OK, MessageBoxImage.Information);
-                return;
-            }
-
-            if (string.IsNullOrEmpty(inputWord) && string.IsNullOrEmpty(inputDescription))
-            {
-                MessageBox.Show($"Empty Word and Description TextBoxes", "No Word and Description", MessageBoxButton.OK, MessageBoxImage.Information);
-                return;
-            }
-
-            if (string.IsNullOrEmpty(inputWord) && string.IsNullOrEmpty(inputCategory))
-            {
-                MessageBox.Show($"Empty Word and Category TextBoxes", "No Word and Category", MessageBoxButton.OK, MessageBoxImage.Information);
-                return;
-            }
-
-            if (string.IsNullOrEmpty(inputDescription) && string.IsNullOrEmpty(inputCategory))
-            {
-                MessageBox.Show($"Empty Description and Category TextBoxes", "No Description and Category", MessageBoxButton.OK, MessageBoxImage.Information);
-                return;
-            }
-
             if (string.IsNullOrEmpty(inputWord))
             {
                 MessageBox.Show($"Empty Word TextBox", "No Word", MessageBoxButton.OK, MessageBoxImage.Information);
                 return;
             }
 
-            if (string.IsNullOrEmpty(inputDescription))
+            if (!string.IsNullOrEmpty(inputImage) && !inputImage.EndsWith(".jpg") == false)
             {
-                MessageBox.Show($"Empty Description TextBox", "No Description", MessageBoxButton.OK, MessageBoxImage.Information);
-                return;
-            }
-
-            if (string.IsNullOrEmpty(inputCategory))
-            {
-                MessageBox.Show($"Empty Category TextBox", "No Category", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show($"The image of the word '{inputWord}' is not a .jpg file.", "Not .jpg Image", MessageBoxButton.OK, MessageBoxImage.Information);
                 return;
             }
 

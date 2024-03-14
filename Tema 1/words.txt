@@ -1,0 +1,12 @@
+orange
+a fruit that has orange color
+orange.jpg
+fruit
+chocolate
+a sweet food
+unavailableImage.jpg
+dessert
+apple
+a fruit that has red color
+unavailableImage.jpg
+fruit
