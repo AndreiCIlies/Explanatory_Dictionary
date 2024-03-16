@@ -30,5 +30,11 @@ namespace Tema_1
             AdminMode adminModeWindow = new AdminMode();
             adminModeWindow.Show();
         }
+
+        private void dictionaryBtn(object sender, RoutedEventArgs e)
+        {
+            DictionaryWindow dictionaryWindow = new DictionaryWindow();
+            dictionaryWindow.Show();
+        }
     }
 }

@@ -77,6 +77,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="DictionaryWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="EditWordWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -96,6 +100,9 @@
     <Compile Include="Classes\Word.cs" />
     <Compile Include="DeleteWordWindow.xaml.cs">
       <DependentUpon>DeleteWordWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DictionaryWindow.xaml.cs">
+      <DependentUpon>DictionaryWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="EditWordWindow.xaml.cs">
       <DependentUpon>EditWordWindow.xaml</DependentUpon>

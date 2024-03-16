@@ -12,7 +12,7 @@
         </Grid.Background>
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
             <Button Content="Admin Mode" Width="150" Height="35" Margin="0 5" FontSize="15" Click="adminModeBtn"/>
-            <Button Content="Dictionary" Width="150" Height="35" Margin="0 5" FontSize="15"/>
+            <Button Content="Dictionary" Width="150" Height="35" Margin="0 5" FontSize="15" Click="dictionaryBtn"/>
             <Button Content="Game" Width="150" Height="35" Margin="0 5" FontSize="15"/>
         </StackPanel>
     </Grid>
