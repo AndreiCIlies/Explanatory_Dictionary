@@ -14,17 +14,19 @@
             <TextBlock Text="Choose Category:" Margin="5" HorizontalAlignment="Left"/>
             <ComboBox Name ="category" Width="200" Height="30" Margin="5" HorizontalAlignment="Left"/>
             <TextBlock Text="Insert Word:" Margin="5" HorizontalAlignment="Left"/>
-            <TextBox Name="word" Width="200" Height="30" Margin="5" HorizontalAlignment="Left"/>
+            <TextBox Name="word" Width="200" Height="30" Margin="5" HorizontalAlignment="Left" TextChanged="getWord"/>
+            <ListBox Name="words" Visibility="Collapsed" Width="200" Margin="5" HorizontalAlignment="Left" SelectionChanged="selectWord"/>
+            <Button Content="Show Word Informations" Width="200" Height="30" Margin="0 5" FontSize="15" Click="showWordInformationsBtn"/>
         </StackPanel>
-        <StackPanel VerticalAlignment="Center" Width="300" HorizontalAlignment="Right" Margin="0,0,45,0" Background="#FFAABBCC">
+        <StackPanel VerticalAlignment="Center" Width="300" HorizontalAlignment="Left" Margin="455,0,0,0" Background="#FFAABBCC" Height="414">
             <TextBlock Text="Word:" Margin="5" HorizontalAlignment="Left"/>
-            <TextBlock Text="" Margin="5" HorizontalAlignment="Left"/>
+            <TextBlock Name="wordTextBlock" Text="" Margin="5" HorizontalAlignment="Left"/>
             <TextBlock Text="Description:" Margin="5" HorizontalAlignment="Left"/>
-            <TextBlock Text="" Margin="5" Width="300" Height="95" HorizontalAlignment="Left"/>
+            <TextBlock Name="descriptionTextBlock" Text="" Margin="5" Width="286" Height="95" HorizontalAlignment="Left"/>
             <TextBlock Text="Category:" Margin="5" HorizontalAlignment="Left"/>
-            <TextBlock Text="" Margin="5" HorizontalAlignment="Left"/>
+            <TextBlock Name="categoryTextBlock" Text="" Margin="5" HorizontalAlignment="Left"/>
             <TextBlock Text="Image:" Margin="5" HorizontalAlignment="Left"/>
-            <Image Name="wordImage" Width="150" Height="150" Margin="5" VerticalAlignment="Center"/>
+            <Image Name="image" Width="142" Height="142"/>
         </StackPanel>
     </Grid>
 </Window>
