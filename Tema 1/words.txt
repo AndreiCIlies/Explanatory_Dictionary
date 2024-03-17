@@ -10,3 +10,55 @@ apple
 a fruit that has red color
 unavailableImage.jpg
 fruit
+soap
+a cleaning product
+soap.jpg
+cleaning
+bottle
+a container
+bottle.jpg
+container
+rose
+a flower
+rose.jpg
+flower
+pants
+a clothing
+pants.jpg
+clothing
+ball
+a toy
+ball.jpg
+toy
+book
+a thing to read
+book.jpg
+reading
+bike
+a vehicle
+bike.jpg
+vehicle
+spinner
+a toy
+unavailableImage.jpg
+toy
+lego
+a toy
+unavailableImage.jpg
+toy
+puppet
+a toy
+unavailableImage.jpg
+toy
+blocks
+a toy
+unavailableImage.jpg
+toy
+beachball
+a toy
+unavailableImage.jpg
+toy
+baseball
+a toy
+unavailableImage.jpg
+toy

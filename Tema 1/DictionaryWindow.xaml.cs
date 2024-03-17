@@ -125,7 +125,7 @@ namespace Tema_1
             }
         }
 
-        private void selectWord(object sender, RoutedEventArgs e)
+        private void selectWord(object sender, SelectionChangedEventArgs e)
         {
             if (words.SelectedItem != null)
             {
@@ -133,6 +133,28 @@ namespace Tema_1
                 words.Visibility = Visibility.Collapsed;
             }
         }
+
+        private void Category_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            UpdateListBox();
+        }
+
+        private void UpdateListBox()
+        {
+            string selectedCategory = category.SelectedItem.ToString();
+
+            if (selectedCategory != null)
+            {
+                List<string> wordsInCategory = allWords
+                    .Where(word => GetWordCategory(word) == selectedCategory)
+                    .OrderBy(word => word)
+                    .ToList();
+
+                words.ItemsSource = wordsInCategory;
+                words.Visibility = Visibility.Visible;
+            }
+        }
+
 
         private void showWordInformationsBtn(object sender, RoutedEventArgs e)
         {

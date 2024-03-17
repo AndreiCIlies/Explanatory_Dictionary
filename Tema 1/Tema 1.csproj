@@ -150,5 +150,35 @@
   <ItemGroup>
     <Resource Include="Images\orange.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="words.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="admin.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ball.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bike.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\book.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bottle.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\chocolate.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\pants.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\rose.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\soap.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
