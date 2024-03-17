@@ -23,5 +23,10 @@ namespace Tema_1
         {
             InitializeComponent();
         }
+
+        private void wordImage_GiveFeedback(object sender, GiveFeedbackEventArgs e)
+        {
+
+        }
     }
 }

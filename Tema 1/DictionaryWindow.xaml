@@ -7,6 +7,24 @@
         mc:Ignorable="d"
         Title="DictionaryWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.Background>
+            <ImageBrush ImageSource="/Images/background.jpg"/>
+        </Grid.Background>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left" Margin="45" Background="#FFAABBCC">
+            <TextBlock Text="Choose Category:" Margin="5" HorizontalAlignment="Left"/>
+            <ComboBox Name ="category" Width="200" Height="30" Margin="5" HorizontalAlignment="Left"/>
+            <TextBlock Text="Insert Word:" Margin="5" HorizontalAlignment="Left"/>
+            <TextBox Name="word" Width="200" Height="30" Margin="5" HorizontalAlignment="Left"/>
+        </StackPanel>
+        <StackPanel VerticalAlignment="Center" Width="300" HorizontalAlignment="Right" Margin="0,0,45,0" Background="#FFAABBCC">
+            <TextBlock Text="Word:" Margin="5" HorizontalAlignment="Left"/>
+            <TextBlock Text="" Margin="5" HorizontalAlignment="Left"/>
+            <TextBlock Text="Description:" Margin="5" HorizontalAlignment="Left"/>
+            <TextBlock Text="" Margin="5" Width="300" Height="95" HorizontalAlignment="Left"/>
+            <TextBlock Text="Category:" Margin="5" HorizontalAlignment="Left"/>
+            <TextBlock Text="" Margin="5" HorizontalAlignment="Left"/>
+            <TextBlock Text="Image:" Margin="5" HorizontalAlignment="Left"/>
+            <Image Name="wordImage" Width="150" Height="150" Margin="5" VerticalAlignment="Center"/>
+        </StackPanel>
     </Grid>
 </Window>
