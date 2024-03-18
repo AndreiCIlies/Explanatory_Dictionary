@@ -1,19 +1,17 @@
-﻿<Window x:Class="Tema_1.MainWindow"
+﻿<Window x:Class="Tema_1.GameWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Tema_1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="GameWindow" Height="450" Width="800">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/Images/background.jpg"/>
         </Grid.Background>
-        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-            <Button Content="Admin Mode" Width="150" Height="35" Margin="0 5" FontSize="15" Click="adminModeBtn"/>
-            <Button Content="Dictionary" Width="150" Height="35" Margin="0 5" FontSize="15" Click="dictionaryBtn"/>
-            <Button Content="Game" Width="150" Height="35" Margin="0 5" FontSize="15" Click="gameBtn"/>
+        <StackPanel VerticalAlignment="Center"  HorizontalAlignment="Center">
+            <Button Content="Start Game" Width="150" Height="35" FontSize="15" Click="startGameBtn"/>
         </StackPanel>
     </Grid>
 </Window>

@@ -36,5 +36,11 @@ namespace Tema_1
             DictionaryWindow dictionaryWindow = new DictionaryWindow();
             dictionaryWindow.Show();
         }
+
+        private void gameBtn(object sender, RoutedEventArgs e)
+        {
+            GameWindow gameWindow = new GameWindow();
+            gameWindow.Show();
+        }
     }
 }
