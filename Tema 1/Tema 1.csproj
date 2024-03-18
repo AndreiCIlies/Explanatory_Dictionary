@@ -67,6 +67,15 @@
     <Compile Include="Round2Window.xaml.cs">
       <DependentUpon>Round2Window.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Round3Window.xaml.cs">
+      <DependentUpon>Round3Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Round4Window.xaml.cs">
+      <DependentUpon>Round4Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Round5Window.xaml.cs">
+      <DependentUpon>Round5Window.xaml</DependentUpon>
+    </Compile>
     <Page Include="AddWordWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -129,6 +138,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Round2Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Round3Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Round4Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Round5Window.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
