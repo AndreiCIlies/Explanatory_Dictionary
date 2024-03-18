@@ -15,19 +15,13 @@ using System.Windows.Shapes;
 namespace Tema_1
 {
     /// <summary>
-    /// Interaction logic for GameWindow.xaml
+    /// Interaction logic for Round1Window.xaml
     /// </summary>
-    public partial class GameWindow : Window
+    public partial class Round1Window : Window
     {
-        public GameWindow()
+        public Round1Window()
         {
             InitializeComponent();
-        }
-
-        private void startGameBtn(object sender, RoutedEventArgs e)
-        {
-            Round1Window round1Window = new Round1Window();
-            round1Window.Show();
         }
     }
 }

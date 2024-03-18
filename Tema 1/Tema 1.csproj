@@ -61,6 +61,9 @@
     <Compile Include="AdminMode.xaml.cs">
       <DependentUpon>AdminMode.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Round1Window.xaml.cs">
+      <DependentUpon>Round1Window.xaml</DependentUpon>
+    </Compile>
     <Page Include="AddWordWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -118,6 +121,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Round1Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
