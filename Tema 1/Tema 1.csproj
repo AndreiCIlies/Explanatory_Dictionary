@@ -64,6 +64,9 @@
     <Compile Include="Round1Window.xaml.cs">
       <DependentUpon>Round1Window.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Round2Window.xaml.cs">
+      <DependentUpon>Round2Window.xaml</DependentUpon>
+    </Compile>
     <Page Include="AddWordWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -122,6 +125,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Round1Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Round2Window.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

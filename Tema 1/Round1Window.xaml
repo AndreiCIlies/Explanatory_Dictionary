@@ -13,9 +13,10 @@
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Background="#FFAABBCC">
             <TextBlock Text="Round 1" FontSize="30" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center"/>
             <TextBlock Name="descriptionTextBlock" Text="" FontSize="20" FontWeight="Bold" Width="300" Height="100" HorizontalAlignment="Center"/>
-            <TextBlock Name="imageTextBlock" Text="" FontSize="20" FontWeight="Bold" Width="200" Height="200" HorizontalAlignment="Center"/>
-            <Button Content="Check Answer" Width="150" Height="35" FontSize="15"/>
-            <TextBlock Name="anserTextBlock" Text="" FontSize="20" FontWeight="Bold" Width="200" HorizontalAlignment="Center"/>
+            <TextBlock Name="imageTextBlock" FontSize="20" FontWeight="Bold" Width="200" Height="200" HorizontalAlignment="Center"/>
+            <TextBox Name="answer" Width="200" Height="30" HorizontalAlignment="Center"/>
+            <Button Content="Check Answer" Width="150" Height="30" FontSize="15" Click="checkAnswerBtn"/>
+            <TextBlock Name="answerTextBlock" Text="" FontSize="20" Width="200" HorizontalAlignment="Center"/>
         </StackPanel>
     </Grid>
 </Window>
