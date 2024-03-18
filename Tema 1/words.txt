@@ -4,11 +4,11 @@ orange.jpg
 fruit
 chocolate
 a sweet food
-unavailableImage.jpg
+chocolate.jpg
 dessert
 apple
 a fruit that has red color
-unavailableImage.jpg
+apple.jpg
 fruit
 soap
 a cleaning product
@@ -40,15 +40,15 @@ bike.jpg
 vehicle
 spinner
 a toy
-unavailableImage.jpg
+spinner.jpg
 toy
 lego
 a toy
-unavailableImage.jpg
+lego.jpg
 toy
 puppet
 a toy
-unavailableImage.jpg
+puppet.jpg
 toy
 blocks
 a toy
