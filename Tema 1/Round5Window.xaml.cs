@@ -65,9 +65,10 @@ namespace Tema_1
 
         private void DisplayWordInfo()
         {
-            descriptionTextBlock.Text = selectedDescription;
+            Random rand = new Random();
+            bool displayImage = rand.Next(2) == 0;
 
-            if (selectedImage != "unavailableImage.jpg")
+            if (displayImage && selectedImage != "unavailableImage.jpg")
             {
                 imageTextBlock.Background = new ImageBrush(new BitmapImage(new Uri("C://Users//usER//Desktop//Anul_II//Semestrul_II//MAP//Teme//Tema 1//Tema 1//Tema 1//Images//" + selectedImage)));
                 descriptionTextBlock.Visibility = Visibility.Collapsed;
@@ -78,6 +79,7 @@ namespace Tema_1
                 imageTextBlock.Background = null;
                 imageTextBlock.Visibility = Visibility.Collapsed;
                 descriptionTextBlock.Visibility = Visibility.Visible;
+                descriptionTextBlock.Text = selectedDescription;
             }
         }
 
