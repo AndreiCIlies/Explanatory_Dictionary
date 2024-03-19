@@ -6,16 +6,12 @@ chocolate
 a sweet food
 chocolate.jpg
 dessert
-apple
-a fruit that has red color
-apple.jpg
-fruit
 soap
 a cleaning product
 soap.jpg
 cleaning
 bottle
-a container
+a container for liquid
 bottle.jpg
 container
 rose
@@ -27,7 +23,7 @@ a clothing
 pants.jpg
 clothing
 ball
-a toy
+a toy to play sport games on playground
 ball.jpg
 toy
 book
@@ -35,30 +31,26 @@ a thing to read
 book.jpg
 reading
 bike
-a vehicle
+a vehicle that has two wheels
 bike.jpg
 vehicle
 spinner
-a toy
+a toy that is spinning and anti-stress
 spinner.jpg
 toy
 lego
-a toy
+a toy that is made of small plastic blocks
 lego.jpg
 toy
 puppet
-a toy
+a figure or object manipulated by a puppeteer to create performances, often in storytelling or entertainment
 puppet.jpg
 toy
 blocks
-a toy
+shaped pieces made from materials such as wood, plastic, or foam, used for construction and imaginative play
 unavailableImage.jpg
 toy
 beachball
-a toy
-unavailableImage.jpg
-toy
-baseball
-a toy
+a toy that ou can play with on the beach
 unavailableImage.jpg
 toy
