@@ -51,6 +51,6 @@ shaped pieces made from materials such as wood, plastic, or foam, used for const
 unavailableImage.jpg
 toy
 beachball
-a toy that ou can play with on the beach
+a toy that you can play with on the beach
 unavailableImage.jpg
 toy
