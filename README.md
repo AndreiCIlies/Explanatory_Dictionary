@@ -1,4 +1,4 @@
-## Explanatory Dictionary
+# Explanatory Dictionary
 
 ### Admin Mode
 https://github.com/user-attachments/assets/f8db26a4-8db1-499d-a813-a9f4781f6b37
